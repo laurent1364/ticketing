@@ -1,0 +1,9 @@
+.idea/.gitignore
+.idea/dictionaries/
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/ticketing.iml
+.idea/vcs.xml
+node_modules
+.DS_Store
