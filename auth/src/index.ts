@@ -5,14 +5,15 @@ import mongoose from 'mongoose';
 import {app} from './app'
 
 const start = async () => {
-    console.log('Stating Auth ...... !!!! ');
+    console.log('Stating Auth ......');
+
+    if (!process.env.JWT_KEY) {
+        throw new Error('JWT_KEY must be define');
+    }
+    if (!process.env.MONGO_URI) {
+        throw new Error('MONGO_URI must be define');
+    }
     try {
-        if(!process.env.JWT_KEY){
-            throw new Error('JWT_KEY must be define');
-        }
-        if(!process.env.MONGO_URI){
-            throw new Error('MONGO_URI must be define');
-        }
         await mongoose.connect(process.env.MONGO_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
