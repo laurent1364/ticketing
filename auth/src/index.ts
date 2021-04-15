@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 import {app} from './app'
 
 const start = async () => {
-    console.log('Stating Auth .. !!!');
+    console.log('Stating Auth .. !!');
     try {
         if(!process.env.JWT_KEY){
             throw new Error('JWT_KEY must be define');
