@@ -7,7 +7,7 @@ export default ({req}) => {
     // SERVICE_NAME => kubectl get services -n NETWORK_NAME
     if (typeof window === 'undefined') {
         return axios.create({
-            baseURL: 'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local',
+            baseURL: 'http://www.ticketing-app-prod-lf.xyz/',
             headers: req.headers
         })
 
