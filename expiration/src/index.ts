@@ -2,6 +2,7 @@ import {natsWrapper} from "./nats-wrapper";
 import {OrderCreatedListener} from "./events/listeners/order-created-listener";
 
 const start = async () => {
+    console.log('Starting ....');
     if (!process.env.NAT_URL) {
         throw new Error('NAT_URL must be define');
     }
